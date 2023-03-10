@@ -46,6 +46,7 @@ module.exports = {
     // static function use this: void
     '@typescript-eslint/no-invalid-void-type': ['error', { allowAsThisParameter: true }],
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['off'],
+    'no-console': ['off'],
   },
   overrides: [
     {

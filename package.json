@@ -1,12 +1,13 @@
 {
-  "name": "typescript-cli-boilerplate",
+  "name": "typeorm-bigint",
   "version": "1.0.0",
-  "description": "TypeScript cli boilerplate",
+  "description": "typeorm-bigint",
   "engines": {
     "node": ">=14"
   },
   "scripts": {
-    "dev": "ts-node src/cli.ts",
+    "dev": "ts-node",
+    "sync": "ts-node ./node_modules/typeorm/cli.js schema:sync -d ./src/db/getSuperHeroDbDataSource.ts",
     "test": "jest --coverage",
     "clean": "just --config ./.configs/just.config.ts clean",
     "lint": "just --config ./.configs/just.config.ts lint",
@@ -19,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imjuni/typescript-cli-boilerplate.git"
+    "url": "git+https://github.com/imjuni/typeorm-bigint.git"
   },
   "keywords": [],
   "author": "ByungJoon Lee",
@@ -30,9 +31,9 @@
     "nozzle": "dist/cli.js"
   },
   "bugs": {
-    "url": "https://github.com/imjuni/typescript-cli-boilerplate/issues"
+    "url": "https://github.com/imjuni/typeorm-bigint/issues"
   },
-  "homepage": "https://github.com/imjuni/typescript-cli-boilerplate#readme",
+  "homepage": "https://github.com/imjuni/typeorm-bigint#readme",
   "devDependencies": {
     "@jest/test-sequencer": "^29.4.3",
     "@rollup/plugin-node-resolve": "^15.0.1",
@@ -78,15 +79,11 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@faker-js/faker": "^7.6.0",
     "chalk": "^4.1.2",
-    "cli-progress": "^3.12.0",
-    "find-up": "^5.0.0",
     "my-easy-fp": "^0.19.3",
-    "ora": "^5.4.1",
-    "pino": "^8.11.0",
-    "pino-pretty": "^9.4.0",
-    "source-map-support": "^0.5.21",
-    "yargs": "^17.7.1"
+    "mysql2": "^3.2.0",
+    "typeorm": "^0.3.12"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
